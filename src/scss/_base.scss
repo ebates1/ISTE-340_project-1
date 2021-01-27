@@ -1,0 +1,90 @@
+$navigation-height: 6rem;
+$main-y-offset: 0rem;
+$container-break-md: 75%;
+$container-break-lg: 68%;
+$container-break-xl: 60%;
+
+/** breakpoints using em to properly support all browsers **/
+$breakpoints: (
+  'screen-xs': ( min-width: 31.25em ),
+  'screen-sm': ( min-width: 37.5em ),
+  'screen-md': ( min-width: 61.25em ),
+  'screen-lg': ( min-width: 78.15em ),
+  'screen-xl': ( min-width: 85.7em )
+);
+
+@mixin horizontaly-flex-between() {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+@mixin vertically-center() {
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+@mixin container-constrain() {
+  @include respond-to(screen-md) { width: $container-break-md; }
+  @include respond-to(screen-lg) { width: $container-break-lg; }
+  @include respond-to(screen-xl) { width: $container-break-xl; }
+}
+
+@mixin horizontally-center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin container() {
+  width: 100%;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-top: 1px solid #c0c0c0;
+
+  @include respond-to(screen-xs) {
+    max-width: #{inspect(map-get($breakpoints, screen-xs))};
+  }
+  @include respond-to(screen-sm) {
+    max-width: #{inspect(map-get($breakpoints, screen-sm))};
+  }
+  @include respond-to(screen-md) {
+    max-width: #{inspect(map-get($breakpoints, screen-md))};
+  }
+  @include respond-to(screen-lg) {
+    max-width: #{inspect(map-get($breakpoints, screen-lg))};
+  }
+  @include respond-to(screen-xl) {
+    max-width: #{inspect(map-get($breakpoints, screen-xl))};
+  }
+}
+
+:target {
+  scroll-margin-top: $navigation-height;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+section {
+  height: 30vh;
+  @include container;
+  scroll-margin-top: $navigation-height;
+}
+
+main {
+  margin-top: $navigation-height + $main-y-offset;
+}
+
+.container {
+  @include container-constrain;
+  @include horizontally-center;
+}

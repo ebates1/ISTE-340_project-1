@@ -2,10 +2,10 @@
   "name": "javascript-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "default": "index.html",
   "scripts": {
-    "start": "(parcel build 'images/*') & parcel index.html",
-    "build": "rm -f dist & parcel build index.html --dist-dir dist/"
+    "start": "parcel index.html",
+    "build": "rm -rf dist & parcel build index.html --dist-dir dist/"
   },
   "keywords": [],
   "author": "",

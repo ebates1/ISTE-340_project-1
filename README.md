@@ -20,4 +20,4 @@ Alternatively you may initiate start command from the package.json file in proje
 A console message will indicate which local port the server is running at to view the project. 
 default is typically http://localhost:1234
 
-This site is also hosted on
+This site is also hosted externally on https://iste-340-project-1.netlify.app/

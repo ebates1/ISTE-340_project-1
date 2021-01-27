@@ -39,7 +39,6 @@ $breakpoints: (
 
 @mixin container() {
   width: 100%;
-  padding: 1rem;
   background-color: whitesmoke;
   border-top: 1px solid #c0c0c0;
 
@@ -66,6 +65,7 @@ $breakpoints: (
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
   width: 100%;
 }
 

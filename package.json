@@ -1,0 +1,17 @@
+{
+  "name": "javascript-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "(parcel build 'images/*') & parcel index.html",
+    "build": "rm -f dist & parcel build index.html --dist-dir dist/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.32.5"
+  }
+}

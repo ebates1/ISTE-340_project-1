@@ -88,3 +88,41 @@ main {
   @include container-constrain;
   @include horizontally-center;
 }
+
+.row {
+  @include flexbox;
+  @include flex-flow(row wrap);
+  @include justify-content(center);
+}
+
+@mixin column() {
+  @include flex-basis(100%);
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.col-4 {
+  @include column;
+}
+
+.col-3 {
+  @include column;
+  @include respond-to(screen-md) {
+    @include flex-basis(75%);
+  }
+}
+
+.col-2 {
+  @include column;
+  @include respond-to(screen-md) {
+    @include flex-basis(50%);
+  }
+}
+
+.col-1 {
+  @include column;
+  @include respond-to(screen-md) {
+    @include flex-basis(25%);
+  }
+}

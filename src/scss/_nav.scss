@@ -12,7 +12,7 @@
     @include horizontally-center;
     width: 100%;
     height: 100%;
-    transition: width .3s linear .3s; // avoid funky snap when rezising window
+    transition: width .3s linear .3s; //avoid funky snap when rezising window
     @include horizontaly-flex-between;
     
     //container media queries
@@ -40,6 +40,5 @@
       text-decoration: none;
       color: black;
     }
-
   }
 }

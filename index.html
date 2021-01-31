@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyWebhost - Hosting & Servers</title>
     <link rel="stylesheet" href="src/scss/app.scss" />
+    <script defer src="src/script/imageSupport.js"></script>
     <script defer src="src/script/script.js"></script>
   </head>
   <body>
@@ -32,24 +33,115 @@
     </header>
 
     <main>
-      <section>
-        <div class="container row">
-          <div class="col-1">column1</div>
-          <div class="col-4">column2</div>
-          <div class="col-1">column3</div>
+      <section class="landing bg-image">
+        <div class="container row mb-5">
+          <div class="col-2 p-2">
+            <h1 class="landing__title mb-1 mt-2">Simple Web Hosting</h1>
+            <p class="landing__text mb-1">
+              <span class="highlight">Lorem</span> ipsum dolor sit amet
+              consectetur adipisicing elit. Cupiditate, necessitatibus?
+            </p>
+            <button class="landing__linkbutton mr-auto" id="landing-button">
+              GET STARTED
+            </button>
+          </div>
+          <div class="col-2 p-2"></div>
         </div>
       </section>
-      <section>111</section>
-      <section class="purple">
+      <section class="my-5">
         <div class="container row">
-          <div class="col-1">column1</div>
-          <div class="col-4">column2</div>
-          <div class="col-1">column3</div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__image">
+                <picture>
+                  <source
+                    srcset="/res/img/avif/cpanel.avif"
+                    type="image/avif"
+                  />
+                  <img src="/res/img/unconverted/cpanel.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="card__body">
+                <h4>Integrated cPanel</h4>
+                <p>
+                  Access to industry standard cPanel software to manage your
+                  hosting.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__image">
+                <picture>
+                  <source
+                    srcset="/res/img/avif/server-support.avif"
+                    type="image/avif"
+                  />
+                  <img src="/res/img/unconverted/server-support.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="card__body">
+                <h4>Fast Support</h4>
+                <p>
+                  Our technicians work tirelessly to ensure that your site is
+                  running properly. Support is available 24/7 on our website.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="card">
+              <div class="card__image">
+                <picture>
+                  <source srcset="/res/img/avif/apps.avif" type="image/avif" />
+                  <img src="/res/img/unconverted/apps.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="card__body">
+                <h4>Installable Apps</h4>
+                <p>
+                  We offer a suite of paid and open source applications like
+                  Wordpress or Shopify that can be installed with the click of a
+                  button.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <section>hello</section>
-      <section>hello</section>
-      <section>hello</section>
+      <section class="colored">hello</section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          This project was made for the course ISTE-222 at
+          <span
+            ><a href="https://www.croatia.rit.edu/" target="_blank">
+              RIT Croatia</a
+            ></span
+          >
+        </p>
+
+        <p>
+          © 2021
+          <span
+            ><a href="https://github.com/ebates1" target="_blank"
+              >Eli Bates</a
+            ></span
+          >
+        </p>
+        <div class="footer__logobar">
+          <picture class="">
+            <source srcset="/res/img/avif/logo.avif" type="image/avif" />
+            <img src="/res/img/webp/logo.webp" class="" />
+          </picture>
+          <picture class="">
+            <source srcset="/res/img/avif/rit-logo.avif" type="image/avif" />
+            <img src="/res/img/webp/rit-logo.webp" class="" />
+          </picture>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

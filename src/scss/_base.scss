@@ -1,10 +1,10 @@
 $navigation-height: 6rem;
-$main-y-offset: 5rem;
+$main-y-offset: 0rem;
 
 /** The percentage of section width the section containers should take up **/
-$container-break-md: 75%;
-$container-break-lg: 68%;
-$container-break-xl: 60%;
+$container-break-md: 95%;
+$container-break-lg: 80%;
+$container-break-xl: 75%;
 
 /** The padding the container should contain **/
 $container-padding: 0.5rem;
@@ -95,14 +95,59 @@ body {
   background-attachment: fixed;
 }
 
-section {
-  height: 30vh;
-  @include container;
-  scroll-margin-top: $navigation-height;
+footer {
+  display: block;
+  width: 100%;
+  margin-top: 10rem;
+  margin-bottom: 36rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgb(33, 73, 160);
+
+  &__logobar {
+    margin-top: 2rem;
+    @include flexbox;
+    @include justify-content(space-around);
+  }
+
+  picture {
+    @include vertically-center;
+  }
+
+  img {
+    display: block;
+    width: 7rem;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color:rgb(5, 111, 199);
+  }
+
+  p {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+    helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  color: #252525;
+  margin-top: 1rem;
+  }
 }
 
 main {
   margin-top: $navigation-height + $main-y-offset;
+}
+
+section {
+  @include container;
+  scroll-margin-top: $navigation-height;
+  overflow: hidden;
 }
 
 .container {
@@ -119,7 +164,6 @@ main {
 
 @mixin column() {
   @include flex-basis(100%);
-  height: 100%;
   position: relative;
   box-sizing: border-box;
 }
@@ -144,13 +188,157 @@ main {
 
 .col-1 {
   @include column;
+  @include respond-to(screen-xs) {
+    @include flex-basis(90%);
+  }
+  @include respond-to(screen-sm) {
+    @include flex-basis(80%);
+  }
   @include respond-to(screen-md) {
-    @include flex-basis(25%);
+    @include flex-basis(30%);
+  }
+  @include respond-to(screen-lg) {
+    @include flex-basis(30.333333%);
   }
 }
 
-.purple {
-  background: rgb(33, 73, 160) linear-gradient(121deg, rgb(33, 73, 160), rgb(33, 73, 160));
+.landing {
+  min-height: calc(50vh - 50px);
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+
+  @include respond-to(screen-md) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
+  }
+
+  &__title {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+      helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji,
+      segoe ui symbol;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #f2f2f2;
+  }
+
+  &__text {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+      helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji,
+      segoe ui symbol;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.01rem;
+    color: #f2f2f2;
+  }
+
+  &__linkbutton {
+    margin: 1rem auto 0 auto;
+    background-color: rgb(0, 140, 255);
+    color: whitesmoke;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    @include respond-to(screen-md) {
+      margin: 1rem auto 0 0;
+    }
+
+    &:hover {
+      background-color: rgb(5, 111, 199);
+    }
+  }
+}
+
+.card {
+  z-index: 5;
+  background-color: whitesmoke;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.12em 0.3em 0 rgb(0 0 0 / 10%);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+
+  @include respond-to(screen-sm) {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  @include respond-to(screen-md) {
+    margin-top: 0;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    height: 25rem;
+  }
+
+  @include respond-to(screen-lg) {
+ 
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  &__body {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    text-align: left;
+
+    @include respond-to(screen-md) {
+      text-align: center;
+    }
+
+    h4 {
+      font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+        helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji,
+        segoe ui symbol;
+      color: #252525;
+      font-weight: 700;
+      font-size: 1.2rem;
+      font-variant-ligatures: common-ligatures;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-weight: 400;
+      color: #324b58;
+      font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+        helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji,
+        segoe ui symbol;
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+  }
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.colored {
+  background: rgb(9, 52, 159)
+    linear-gradient(121deg, rgb(9, 52, 159), rgb(9, 52, 159));
   width: 100vw;
   position: relative;
   left: calc(-50vw + 50%);

@@ -1,0 +1,42 @@
+/** Margin / Padding **/
+$spacing-values: (auto, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+$spacing-directions: (top, right, bottom, left);
+
+@each $spacing in $spacing-values {
+  .m-#{$spacing} {
+    margin: #{if($spacing == auto, auto,$spacing + em)} !important;
+  }
+  .p-#{$spacing} {
+    padding: #{if($spacing == auto, auto,$spacing + em)} !important;
+  }
+
+  .mx-#{$spacing} {
+    margin-left: #{if($spacing == auto, auto,$spacing + em)} !important;
+    margin-right: #{if($spacing == auto, auto,$spacing + em)} !important;
+  }
+
+  .my-#{$spacing} {
+    margin-top: #{if($spacing == auto, auto,$spacing + em)} !important;
+    margin-bottom: #{if($spacing == auto, auto,$spacing + em)} !important;
+  }
+
+  .px-#{$spacing} {
+    padding-left: #{if($spacing == auto, auto,$spacing + em)} !important;
+    padding-right: #{if($spacing == auto, auto,$spacing + em)} !important;
+  }
+
+  .py-#{$spacing} {
+    padding-top: #{if($spacing == auto, auto,$spacing + em)} !important;
+    padding-top: #{if($spacing == auto, auto,$spacing + em)} !important;
+  }
+
+  @each $direction in $spacing-directions {
+    .m#{str-slice($direction, 0, 1)}-#{$spacing} {
+      margin-#{$direction}: #{if($spacing == auto, auto,$spacing + em)} !important;
+    }
+    .p#{str-slice($direction, 0, 1)}-#{$spacing} {
+      padding-#{$direction}: #{if($spacing == auto, auto,$spacing + em)} !important;
+    }
+  }
+}
+/**/

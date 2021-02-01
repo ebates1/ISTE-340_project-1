@@ -1,0 +1,36 @@
+.footer {
+  text-align: center;
+  border-top: 1px solid rgb(33, 73, 160);
+
+  &__logobar {
+    margin-top: 2rem;
+    @include flexbox;
+    @include justify-content(space-around);
+  }
+
+  picture {
+    @include vertically-center;
+  }
+
+  img {
+    display: block;
+    width: 7rem;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color:rgb(5, 111, 199);
+  }
+
+  p {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+    helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  color: #252525;
+  margin-top: 1rem;
+  }
+}

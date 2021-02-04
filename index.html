@@ -37,7 +37,7 @@
       <section class="landing bg-image">
         <div class="container row mb-5">
           <div class="col-2 p-2">
-            <h1 class="landing__title mb-1 mt-2">Simple Web Hosting</h1>
+            <h1 class="landing__title mb-1 mt-5">Simple Web Hosting</h1>
             <p class="landing__text mb-1">
               <span class="highlight">Lorem</span>
               ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
@@ -52,7 +52,7 @@
       </section>
 
       <!-- cards showing features -->
-      <section class="my-5">
+      <section class="feature-cards my-5">
         <div class="container row">
           <div class="col-1">
             <div class="card">
@@ -114,21 +114,42 @@
           </div>
         </div>
       </section>
+
+      <!-- The option selects for the product -->
       <section class="colored">
         <div class="container">
-          <h3 class="mb-2">Choose the package that best fits your needs</h3>
-          <div class="input-container">
-            <div class="option">
-              <label for="packages">Choose option:</label>
-              <select name="packages" id="packages"></select>
-            </div>
-            <div class="option">
-              <label for="packages">Choose option:</label>
-              <select name="packages" id="packages"></select>
-            </div>
-            <div class="option">
-              <label for="packages">Choose option:</label>
-              <select name="packages" id="packages"></select>
+          <div class="product-selection mx-auto">
+            <h2 class="section__title">Product Selection</h2>
+            <div class="pane row">
+              <div class="pane__selection col-2">
+                <div>
+                  <h5>Select a service type</h5>
+                  <select class="select">
+                    <option value="">option 1</option>
+                    <option value="">option 2</option>
+                    <option value="">option 3</option>
+                  </select>
+                </div>
+                <select class="select">
+                  <option value="">option 1</option>
+                  <option value="">option 2</option>
+                  <option value="">option 3</option>
+                </select>
+                <select class="select disabled">
+                  <option value="">option 1</option>
+                  <option value="">option 2</option>
+                  <option value="">option 3</option>
+                </select>
+              </div>
+              <div class="pane__view col-2">
+                <picture>
+                  <source
+                    srcset="/res/img/avif/cpanel.avif"
+                    type="image/avif"
+                  />
+                  <img src="/res/img/unconverted/cpanel.jpg" alt="" />
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -145,7 +166,7 @@
           >
         </p>
         <p>
-          This project was made for the course ISTE-222 at
+          This project was made for the course ISTE-340 at
           <span
             ><a href="https://www.croatia.rit.edu/" target="_blank">
               RIT Croatia</a

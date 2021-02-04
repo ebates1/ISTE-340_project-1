@@ -1,5 +1,6 @@
 .footer {
   text-align: center;
+  background-color: #252525;
   border-top: 1px solid rgb(33, 73, 160);
 
   &__logobar {
@@ -23,14 +24,14 @@
   }
 
   a:visited {
-    color:rgb(5, 111, 199);
+    color: rgb(5, 111, 199);
   }
 
   p {
     font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
-    helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji,
-    segoe ui symbol;
-  color: #252525;
-  margin-top: 1rem;
+      helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji,
+      segoe ui symbol;
+    color: #ffffff;
+    margin-top: 1rem;
   }
 }

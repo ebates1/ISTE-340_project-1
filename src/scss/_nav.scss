@@ -9,19 +9,21 @@
   top: 0;
   @include horizontaly-flex-between;
 
-  &__container { //constrains the navbar
+  &__container {
+    //constrains the navbar
     @include horizontally-center;
     width: 100%;
     height: 100%;
-    transition: width .3s linear .3s; //avoid funky snap when rezising window
+    transition: width 0.3s linear 0.3s; //avoid funky snap when rezising window
     @include horizontaly-flex-between;
-    
+
     //container media queries
     @include container-constrain;
   }
 
   /** The logo*/
-  &__logo { // The site logo
+  &__logo {
+    // The site logo
     height: 75%;
   }
 
@@ -30,14 +32,15 @@
     height: 100%;
     list-style: none;
     @include horizontaly-flex-between;
-    
-    &__item { //The unordered list
+
+    &__item {
+      //The unordered list
       @include vertically-center;
       margin-right: 2rem;
     }
-  
 
-    &__link { //The anchor
+    &__link {
+      //The anchor
       text-decoration: none;
       color: black;
     }

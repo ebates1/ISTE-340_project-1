@@ -1,11 +1,10 @@
-/** A stylesheet to hold all the background images and their conditionals **/
+/** A stylesheet to hold any background images and their conditionals **/
 
 /* The main class that is tagged to indicate a conditional bg-image, javascript will be used to apply which conditional class (avif or no-avif) */
 $avif-path: 'res/img/avif/';
 
 .bg-image {
-  background-position: 57% center;
-  min-height: calc(70vh - 50px);
+  background-position: 63% 0%;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -23,30 +22,22 @@ $avif-path: 'res/img/avif/';
   @include respond-to(screen-md) {
     background-position: 50% 10%;
   }
-
 }
 
 .landing.avif {
-  background-image: linear-gradient(45deg, rgba(28, 70, 177, 0.523), rgba(0, 8, 70, 0.58)), url('/res/img/avif/new-landing.avif');
-  @include respond-to(screen-md) {
-    background-image: url('/res/img/avif/new-landing.avif');
-  }
+  background-image: linear-gradient(
+      45deg,
+      rgba(28, 70, 177, 0.523),
+      rgba(0, 8, 70, 0.58)
+    ),
+    url('/res/img/avif/new-landing.avif');
 }
 
 .landing.no-avif {
-  background-image: linear-gradient(45deg, rgba(28, 70, 177, 0.523), rgba(0, 8, 70, 0.58)), url('/res/img/webp/new-landing.webp');
-  @include respond-to(screen-md) {
-    background-image: url('/res/img/webp/new-landing.webp');
-  }
+  background-image: linear-gradient(
+      45deg,
+      rgba(28, 70, 177, 0.523),
+      rgba(0, 8, 70, 0.58)
+    ),
+    url('/res/img/webp/new-landing.webp');
 }
-
-.mobile-overlay {
-  background: rgba(70, 72, 82, 0.3);
-  @include respond-to(screen-md) {
-    background: none;
-  }
-}
-
-
-
-//background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('landingpagepic.jpg');

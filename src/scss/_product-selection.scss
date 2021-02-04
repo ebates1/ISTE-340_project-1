@@ -44,7 +44,7 @@
   color: #969696;
   position: relative;
   cursor: pointer;
-  border: none;
+  border: none; // reset border
   outline: none;
   border-bottom: solid #a7a7a7 1px;
   border-radius: 0.1rem;
@@ -53,6 +53,7 @@
   margin-bottom: 1.5rem;
   background: none;
   font-family: $header-font;
+  width: 100%;
 
   @include respond-to(screen-md) {
     margin-bottom: 0rem;
@@ -61,10 +62,21 @@
 
   &:focus {
     border-color: $primary-color;
-    border-radius: 0.1rem;
+  }
+
+  &:hover {
+    border: solid rgb(75, 75, 75) 1px;
+    border-radius: 0.2rem;
   }
 }
 
 .disabled {
   filter: brightness(145%);
+
+  &:hover,
+  &:focus {
+    border: none;
+    border-bottom: solid #a7a7a7 1px;
+    border-radius: 0.1rem;
+  }
 }

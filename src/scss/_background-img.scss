@@ -4,7 +4,7 @@
 $avif-path: 'res/img/avif/';
 
 .bg-image {
-  background-position: 63% 0%;
+  background-position: 38% 0%;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -25,12 +25,13 @@ $avif-path: 'res/img/avif/';
 }
 
 .landing.avif {
-  background-image: linear-gradient(
-      45deg,
-      rgba(28, 70, 177, 0.523),
-      rgba(0, 8, 70, 0.58)
-    ),
-    url('/res/img/avif/new-landing.avif');
+  // background-image: linear-gradient(
+  //     45deg,
+  //     rgba(28, 70, 177, 0.523),
+  //     rgba(0, 8, 70, 0.58)
+  //   ),
+  //   url('/res/img/unconverted/blog_1.svg');
+  background-image: url('/res/img/unconverted/blog_1.svg');
 }
 
 .landing.no-avif {

@@ -2,7 +2,6 @@
   height: $navigation-height;
   max-height: $navigation-height;
   background-color: $navbar-color;
-  border-bottom: 1px solid $primary-color;
   width: 100%;
   z-index: 100;
   position: fixed;
@@ -42,7 +41,11 @@
     &__link {
       //The anchor
       text-decoration: none;
-      color: black;
+      font-family: $header-font;
+      color: $navbar-link-color;
+      &:hover {
+        color: $navbar-link-hover;
+      }
     }
   }
 }

@@ -13,19 +13,22 @@
         <div class="nav__container">
           <a href="#">
             <picture class="nav__logo">
-              <source srcset="/res/img/avif/logo.avif" type="image/avif" />
-              <img src="/res/img/webp/logo.webp" class="nav__logo" />
+              <source
+                srcset="/res/img/unconverted/logo2.png"
+                type="image/avif"
+              />
+              <img src="/res/img/unconverted/logo2.png" class="nav__logo" />
             </picture>
           </a>
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a href="" class="nav-list__link">link 1</a>
+              <a href="#services" class="nav-list__link">Services</a>
             </li>
             <li class="nav-list__item">
-              <a href="" class="nav-list__link">link 2</a>
+              <a href="" class="nav-list__link">About</a>
             </li>
             <li class="nav-list__item">
-              <a href="" class="nav-list__link">link 3</a>
+              <a href="#order" class="nav-list__link">Order</a>
             </li>
           </ul>
         </div>
@@ -52,10 +55,10 @@
       </section>
 
       <!-- cards showing features -->
-      <section class="feature-cards my-5">
+      <section id="services" class="feature-cards my-5">
         <div class="container row">
           <div class="col-1">
-            <div class="card">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
               <div class="card__image">
                 <picture>
                   <source
@@ -75,7 +78,7 @@
             </div>
           </div>
           <div class="col-1">
-            <div class="card">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
               <div class="card__image">
                 <picture>
                   <source
@@ -95,7 +98,7 @@
             </div>
           </div>
           <div class="col-1">
-            <div class="card">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
               <div class="card__image">
                 <picture>
                   <source srcset="/res/img/avif/apps.avif" type="image/avif" />
@@ -116,9 +119,13 @@
       </section>
 
       <!-- The option selects for the product -->
-      <section class="colored">
+      <section id="order" class="colored">
         <div class="container">
-          <div class="product-selection mx-auto">
+          <div
+            class="product-selection mx-auto"
+            data-aos="flip-up"
+            data-aos-duration="1200"
+          >
             <h2 class="section__title">Product Selection</h2>
             <div class="pane row">
               <div class="pane__selection col-2">
@@ -136,7 +143,7 @@
                   <option value="">option 3</option>
                 </select>
                 <select class="select disabled">
-                  <option value="">option 1</option>
+                  <option value="">disabled</option>
                   <option value="">option 2</option>
                   <option value="">option 3</option>
                 </select>
@@ -155,7 +162,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-aos="fade" data-aos-duration="1000">
       <div class="container">
         <p>
           © 2021

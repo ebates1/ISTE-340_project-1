@@ -65,11 +65,13 @@
       font-family: $header-font;
       color: $navbar-link-color;
       font-size: 1.25rem;
+      transition: all 0.3s ease-in-out;
       @include respond-to(screen-md) {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
       &:hover {
         color: $navbar-link-hover;
+        transform: scale(1.2);
       }
     }
   }

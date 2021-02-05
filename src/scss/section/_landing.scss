@@ -1,0 +1,52 @@
+.landing {
+  min-height: calc(50vh - 50px);
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+
+  @include respond-to(screen-md) {
+    clip-path: polygon(0 0, 92% 0, 96% 83%, 0 83%);
+  }
+
+  &__title {
+    font-family: $header-font;
+    font-weight: 700;
+    font-size: 3rem;
+    color: $landing-title-color;
+    margin-top: 3rem;
+    @include respond-to(screen-md) {
+      margin-top: 10rem;
+    }
+  }
+
+  &__text {
+    font-family: $header-font;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.01rem;
+    color: $landing-text-color;
+  }
+
+  &__linkbutton {
+    margin: 1rem auto 0 auto;
+    background-color: $primary-button-color;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    @include respond-to(screen-md) {
+      margin: 1rem auto 0 0;
+    }
+
+    &:hover {
+      background-color: $primary-button-hover;
+      transform: scale(1.2);
+    }
+  }
+}

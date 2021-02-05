@@ -1,7 +1,7 @@
 .footer {
   text-align: center;
   background-color: $footer-color;
-  border-top: 1px solid rgb(33, 73, 160);
+  border-top: 1px solid $primary-color;
 
   &__logobar {
     margin-top: 2rem;
@@ -21,10 +21,11 @@
 
   a {
     text-decoration: none;
+    color: rgb(52, 164, 255);
   }
 
   a:visited {
-    color: rgb(5, 111, 199);
+    color: rgb(71, 171, 252);
   }
 
   p {

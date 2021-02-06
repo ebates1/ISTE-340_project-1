@@ -25,7 +25,7 @@
               <a href="#services" class="nav-list__link">Services</a>
             </li>
             <li class="nav-list__item">
-              <a href="" class="nav-list__link">About</a>
+              <a href="#order" class="nav-list__link">About</a>
             </li>
             <li class="nav-list__item">
               <a href="#order" class="nav-list__link">Order</a>
@@ -54,32 +54,38 @@
         </div>
       </section>
 
-      <!-- cards showing features -->
-      <section id="services" class="feature-cards my-5">
-        <div class="container row">
-          <div class="col-1">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
-              <div class="card__image">
+      <section class="section feature-cards">
+        <div class="container">
+          <h2 class="section__title text-center"             data-aos="zoom-in"
+          data-aos-duration="1000">Included Hosting Features</h2>
+          <div class="row">
+            <div class="col-1">
+              <div class="fancy-card"             data-aos="zoom-in"
+              data-aos-duration="1000">
                 <picture>
                   <source
                     srcset="/res/img/avif/cpanel.avif"
                     type="image/avif"
                   />
-                  <img src="/res/img/unconverted/cpanel.jpg" alt="" />
+                  <img
+                    src="/res/img/unconverted/cpanel.jpg"
+                    alt="cpanel user interface"
+                  />
                 </picture>
-              </div>
-              <div class="card__body">
-                <h4>Integrated cPanel</h4>
-                <p>
-                  Access to industry standard cPanel software to manage your
-                  hosting.
-                </p>
+                <div class="fancy-card__title">
+                  <div>
+                    <h3>Integrated cPanel</h3>
+                    <p class="show-on-hover">
+                      Access to industry standard cPanel software to manage your
+                      hosting.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-1">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
-              <div class="card__image">
+            <div class="col-1">
+              <div class="fancy-card"             data-aos="zoom-in"
+              data-aos-duration="1000">
                 <picture>
                   <source
                     srcset="/res/img/avif/server-support.avif"
@@ -87,36 +93,118 @@
                   />
                   <img src="/res/img/unconverted/server-support.jpg" alt="" />
                 </picture>
-              </div>
-              <div class="card__body">
-                <h4>Fast Support</h4>
-                <p>
-                  Our technicians work tirelessly to ensure that your site is
-                  running properly. Support is available 24/7 on our website.
-                </p>
+                <div class="fancy-card__title">
+                  <div>
+                    <h3>Fast Support</h3>
+                    <p class="show-on-hover">
+                      Our technicians work tirelessly to ensure that your site
+                      is running properly. Support is available 24/7 on our
+                      website.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-1">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
-              <div class="card__image">
+            <div class="col-1">
+              <div class="fancy-card"             data-aos="zoom-in"
+              data-aos-duration="1000">
                 <picture>
-                  <source srcset="/res/img/avif/apps.avif" type="image/avif" />
-                  <img src="/res/img/unconverted/apps.jpg" alt="" />
-                </picture>
-              </div>
-              <div class="card__body">
-                <h4>Installable Apps</h4>
-                <p>
-                  We offer a suite of paid and open source applications like
-                  Wordpress or Shopify that can be installed with the click of a
-                  button.
-                </p>
+                  <source
+                    srcset="/res/img/avif/apps.avif"
+                    type="image/avif"
+                  />
+                  <img src="/res/img/unconverted/apps.jpg" alt="an app webstore" />
+                <div class="fancy-card__title">
+                  <div>
+                    <h3>Installable Apps</h3>
+                    <p class="show-on-hover">
+                      We offer a suite of paid and open source applications like
+                      Wordpress that can be installed with the click of a
+                      button.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- cards showing features -->
+      <!-- <section id="services" class="section feature-cards my-5">
+        <div class="container">
+          <h2
+            class="section__title text-center"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            Included Hosting Features
+          </h2>
+          <div class="row">
+            <div class="col-1">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="card__image">
+                  <picture>
+                    <source
+                      srcset="/res/img/avif/cpanel.avif"
+                      type="image/avif"
+                    />
+                    <img src="/res/img/unconverted/cpanel.jpg" alt="" />
+                  </picture>
+                </div>
+                <div class="card__body">
+                  <h4>Integrated cPanel</h4>
+                  <p>
+                    Access to industry standard cPanel software to manage your
+                    hosting.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="card__image">
+                  <picture>
+                    <source
+                      srcset="/res/img/avif/server-support.avif"
+                      type="image/avif"
+                    />
+                    <img src="/res/img/unconverted/server-support.jpg" alt="" />
+                  </picture>
+                </div>
+                <div class="card__body">
+                  <h4>Fast Support</h4>
+                  <p>
+                    Our technicians work tirelessly to ensure that your site is
+                    running properly. Support is available 24/7 on our website.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="card__image">
+                  <picture>
+                    <source
+                      srcset="/res/img/avif/apps.avif"
+                      type="image/avif"
+                    />
+                    <img src="/res/img/unconverted/apps.jpg" alt="" />
+                  </picture>
+                </div>
+                <div class="card__body">
+                  <h4>Installable Apps</h4>
+                  <p>
+                    We offer a suite of paid and open source applications like
+                    Wordpress or Shopify that can be installed with the click of
+                    a button.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
 
       <!-- The option selects for the product -->
       <section id="order" class="colored">

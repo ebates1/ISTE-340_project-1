@@ -5,7 +5,7 @@ AOS.init();
 
 const headerButton = document.querySelector('.landing__linkbutton');
 
-document.querySelector('.nav__list').addEventListener('click', function (e) {
+document.querySelector('.nav-list').addEventListener('click', function (e) {
   e.preventDefault();
   const target = e.target;
   if (target.classList.contains('nav-list__link')) {

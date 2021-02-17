@@ -32,7 +32,8 @@ $navbar-color: #14172bf5;
 $navbar-link-color: rgb(199, 199, 199);
 $navbar-link-hover: #fff;
 
-$section-color: $primary-color;
+$section-color: #123499a1;
+$feature-cards-color: $section-color;
 
 $header-text-color: rgb(0, 0, 0);
 
@@ -47,8 +48,7 @@ $primary-button-hover: $secondary-color;
 
 $shadow: 0 0.12em 0.3em 0 rgb(0 0 0 / 10%);
 
-$header-font: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
-  helvetica neue, Arial, sans-serif;
+$header-font: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif;
 
 /** breakpoints using em to properly support all browsers **/
 $breakpoints: (
@@ -127,21 +127,18 @@ $breakpoints: (
   }
 }
 
-html {
-  box-sizing: border-box;
-  overflow-x: hidden;
-  width: 100%;
-}
-
 body {
   overflow-x: hidden;
   width: 100%;
-  background-color: $background-color;
-  background-image: $background-image;
+  //background-color: $background-color;
+  //background-image: $background-image;
   background-attachment: fixed;
+  position: relative;
 }
 
-#services {
+.feature-cards {
+  height: 40vh;
+  overflow: hidden;
   scroll-margin-top: $navigation-height + 8rem;
 }
 
@@ -153,12 +150,10 @@ footer {
   display: block;
   width: 100%;
   margin-top: 10rem;
-  //margin-bottom: 36rem;
 }
 
 section {
   @include container;
-  scroll-margin-top: $navigation-height;
   overflow: hidden;
   height: auto;
 }
@@ -221,4 +216,9 @@ h3 {
 
 .text-center {
   text-align: center;
+}
+
+.hidden {
+  display: none;
+  pointer-events: none;
 }

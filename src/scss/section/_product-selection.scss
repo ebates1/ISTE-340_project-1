@@ -14,11 +14,14 @@
   box-shadow: 0 0.12em 0.3em 0 rgb(0 0 0 / 10%);
 
   &__selection {
-    margin-bottom: 1rem;
     padding: 1rem 1rem 1rem 1rem;
+  }
+
+  &__selects {
+    margin-bottom: 1rem;
+
     @include flexbox;
     @include flex-direction(column);
-    @include justify-content(space-around);
     @include respond-to(screen-md) {
       margin-bottom: 0rem;
       margin-right: 1rem;
@@ -56,22 +59,23 @@
   width: 100%;
 
   @include respond-to(screen-md) {
-    margin-bottom: 0rem;
+    margin-bottom: 1.2rem;
     width: 75%;
   }
 
   &:focus {
-    border-color: $primary-color;
+    border-color: rgb(0, 51, 255);
   }
 
   &:hover {
-    border: solid rgb(75, 75, 75) 1px;
+    border-bottom: solid rgb(0, 51, 255) 1px;
     border-radius: 0.2rem;
   }
 }
 
 .disabled {
   filter: brightness(145%);
+  width: 0%;
 
   &:hover,
   &:focus {
@@ -79,4 +83,7 @@
     border-bottom: solid #a7a7a7 1px;
     border-radius: 0.1rem;
   }
+}
+
+#orderBtn {
 }

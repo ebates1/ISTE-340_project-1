@@ -4,14 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyWebhost - Hosting & Servers</title>
     <link rel="stylesheet" href="src/scss/app.scss" />
-    <script defer src="src/script/imageSupport.js"></script>
-    <script defer src="src/script/script.js"></script>
+    <script defer src="src/script/app.js"></script>
   </head>
-  <body>
+  <body class="body bg-image">
+    <div class="bg-blur"></div>
     <header class="header">
       <nav class="nav">
         <div class="nav__container">
-          <a href="#">
+          <a href="">
             <picture class="nav__logo">
               <source
                 srcset="/res/img/unconverted/logo2.png"
@@ -37,7 +37,7 @@
 
     <main>
       <!-- The landing for the page -->
-      <section class="landing bg-image">
+      <section id="landing" class="landing bg-image">
         <div class="container row mb-5">
           <div class="col-2 p-2">
             <h1 class="landing__title mb-1">Simple Web Hosting</h1>
@@ -54,9 +54,10 @@
         </div>
       </section>
 
-      <section class="section feature-cards">
+      <!-- cards showing features -->
+      <section id="services" class="section colored feature-cards">
         <div class="container">
-          <h2 class="section__title text-center"             data-aos="zoom-in"
+          <h2 class="section__title text-center" data-aos="zoom-in"
           data-aos-duration="1000">Included Hosting Features</h2>
           <div class="row">
             <div class="col-1">
@@ -127,114 +128,25 @@
               </div>
             </div>
           </div>
+          <h2 class="section__title text-center mt-5" data-aos="zoom-in"
+          data-aos-duration="1000">Our Company</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam explicabo minus soluta ea quasi quia et numquam fuga fugiat accusamus?</p>
         </div>
       </section>
-
-      <!-- cards showing features -->
-      <!-- <section id="services" class="section feature-cards my-5">
-        <div class="container">
-          <h2
-            class="section__title text-center"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-          >
-            Included Hosting Features
-          </h2>
-          <div class="row">
-            <div class="col-1">
-              <div class="card" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="card__image">
-                  <picture>
-                    <source
-                      srcset="/res/img/avif/cpanel.avif"
-                      type="image/avif"
-                    />
-                    <img src="/res/img/unconverted/cpanel.jpg" alt="" />
-                  </picture>
-                </div>
-                <div class="card__body">
-                  <h4>Integrated cPanel</h4>
-                  <p>
-                    Access to industry standard cPanel software to manage your
-                    hosting.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-1">
-              <div class="card" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="card__image">
-                  <picture>
-                    <source
-                      srcset="/res/img/avif/server-support.avif"
-                      type="image/avif"
-                    />
-                    <img src="/res/img/unconverted/server-support.jpg" alt="" />
-                  </picture>
-                </div>
-                <div class="card__body">
-                  <h4>Fast Support</h4>
-                  <p>
-                    Our technicians work tirelessly to ensure that your site is
-                    running properly. Support is available 24/7 on our website.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-1">
-              <div class="card" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="card__image">
-                  <picture>
-                    <source
-                      srcset="/res/img/avif/apps.avif"
-                      type="image/avif"
-                    />
-                    <img src="/res/img/unconverted/apps.jpg" alt="" />
-                  </picture>
-                </div>
-                <div class="card__body">
-                  <h4>Installable Apps</h4>
-                  <p>
-                    We offer a suite of paid and open source applications like
-                    Wordpress or Shopify that can be installed with the click of
-                    a button.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
 
       <!-- The option selects for the product -->
       <section id="order" class="colored">
         <div class="container">
           <div
             class="product-selection mx-auto"
-            data-aos="flip-up"
+            data-aos="fade" 
             data-aos-duration="1200"
           >
             <h2 class="section__title">Product Selection</h2>
             <div class="pane row">
               <div class="pane__selection col-2">
-                <div>
-                  <h5>Select a service type</h5>
-                  <select class="select">
-                    <option value="">option 1</option>
-                    <option value="">option 2</option>
-                    <option value="">option 3</option>
-                  </select>
-                </div>
-                <select class="select">
-                  <option value="">option 1</option>
-                  <option value="">option 2</option>
-                  <option value="">option 3</option>
-                </select>
-                <select class="select disabled">
-                  <option value="">disabled</option>
-                  <option value="">option 2</option>
-                  <option value="">option 3</option>
-                </select>
+                <div class="pane__selects"></div>
+                <a id="orderBtn" class="hidden" href="/order.html">Submit</a>
               </div>
               <div class="pane__view col-2">
                 <picture>
@@ -250,6 +162,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer pb-10" data-aos="fade" data-aos-duration="1000">
       <div class="container">
         <p>

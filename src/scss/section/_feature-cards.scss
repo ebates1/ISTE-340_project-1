@@ -1,9 +1,9 @@
 .feature-cards {
+  padding-top: $navigation-height;
   margin-bottom: 5rem;
-  @include respond-to(screen-md) {
-    z-index: 5;
-    // transform: translateY(-40vh);
-  }
+  height: auto;
+  background-color: $feature-cards-color;
+  padding-bottom: $navigation-height;
 }
 
 .card {

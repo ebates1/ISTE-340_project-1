@@ -1,0 +1,133 @@
+.order {
+  width: 100%;
+  @include vertically-center;
+  position: relative;
+  height: calc(100vh - 100px);
+
+  &__box {
+    z-index: 2;
+    width: 50%;
+    height: 65%;
+    background-color: rgba(255, 255, 255, 0.831);
+    border-radius: 0.5rem;
+    box-shadow: $shadow;
+    @include flexbox;
+  }
+
+  &__left {
+    height: 100%;
+    width: 50%;
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+      @include respond-to(screen-md) {
+        // object-fit: cover;
+        // object-position: top left;
+        max-width: 100%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__right {
+    height: 100%;
+    width: 50%;
+    padding-right: 1rem;
+  }
+
+  &__summary {
+    height: 30%;
+    padding: 1rem 0.5rem 0.5rem 0;
+    @include flexbox;
+    @include flex-direction(column);
+
+    h3 {
+      color: black;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__form {
+    @include flexbox;
+    @include flex-direction(column);
+  }
+
+  &__row {
+    width: 100%;
+    @include flexbox;
+    @include justify-content(space-between);
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    font-family: $header-font;
+  }
+
+  &__total {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  &__form {
+    height: 70%;
+    width: 100%;
+    @include flexbox;
+    @include flex-direction(column);
+    input {
+    }
+  }
+}
+
+$field-height: 3rem;
+
+.field {
+  position: relative;
+  height: $field-height;
+  width: 65%;
+  font-family: $header-font;
+  margin-bottom: 1.5rem;
+
+  .placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  input {
+    height: 100%;
+    padding: 0.75rem 0;
+    width: 100%;
+    border: none;
+    border-bottom: 0.1rem solid blue;
+    background: none;
+    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+    &:focus {
+      outline: none;
+      border-bottom: 0.2rem solid blue;
+    }
+
+    &::-webkit-input-placeholder {
+      transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: blue;
+      transform: translateY(-1rem);
+    }
+  }
+}
+
+.message {
+  color: red;
+}

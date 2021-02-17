@@ -4,8 +4,9 @@ import 'aos/dist/aos.css';
 AOS.init();
 
 const headerButton = document.querySelector('.landing__linkbutton');
+const logoButton = document.querySelector('nav__logo');
 
-document.querySelector('.nav-list').addEventListener('click', function (e) {
+document.querySelector('.nav-list').addEventListener('click', (e) => {
   e.preventDefault();
   const target = e.target;
   if (target.classList.contains('nav-list__link')) {
@@ -17,4 +18,9 @@ document.querySelector('.nav-list').addEventListener('click', function (e) {
 headerButton.addEventListener('click', (e) => {
   e.preventDefault();
   document.querySelector('#services').scrollIntoView({ behavior: 'smooth' });
+});
+
+logoButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('#landing').scrollIntoView({ behavior: 'smooth' });
 });

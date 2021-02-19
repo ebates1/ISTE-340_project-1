@@ -1,0 +1,205 @@
+@mixin grid-card {
+  border-radius: 0.4rem;
+  padding: 1rem;
+  box-shadow: $shadow;
+  background-color: whitesmoke;
+}
+
+$field-height: 3rem;
+
+.field {
+  position: relative;
+  height: $field-height;
+  font-family: $header-font;
+  margin-bottom: 1rem;
+
+  .placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 0.1rem solid blue;
+    background: none;
+    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+    &:focus {
+      outline: none;
+      border-bottom: 0.2rem solid blue;
+    }
+
+    &::-webkit-input-placeholder {
+      transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: blue;
+      transform: translateY(-1rem);
+    }
+  }
+}
+
+.message {
+  color: red;
+}
+
+#checkout {
+  height: auto;
+  @include respond-to(screen-md) {
+    height: calc(100vh - 8rem);
+  }
+}
+
+/* order form positioning */
+.checkout-box {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  row-gap: 0.5rem;
+  grid-template-columns: auto 48% 48% auto;
+  grid-template-rows: repeat(6, auto);
+
+  @include respond-to(screen-md) {
+    column-gap: 0.5rem;
+    grid-template-columns: auto 15% 20% 25% 25% auto;
+    grid-template-rows: auto 15% 15% 15% 15% 15% 15% auto;
+  }
+
+  &__img {
+    @include grid-card;
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+
+    @include respond-to(screen-md) {
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 3;
+    }
+  }
+
+  &__features {
+    @include grid-card;
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+
+    @include respond-to(screen-md) {
+      grid-column: 2 / span 2;
+      grid-row: 5 / span 3;
+    }
+  }
+
+  &__summary {
+    @include grid-card;
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+
+    @include respond-to(screen-md) {
+      grid-column: 4 / span 2;
+      grid-row: 2 / span 2;
+    }
+  }
+
+  &__form {
+    @include grid-card;
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 2;
+
+    @include respond-to(screen-md) {
+      grid-column: 4 / span 2;
+      grid-row: 4 / span 4;
+    }
+  }
+}
+
+.checkout-box {
+  font-family: $header-font;
+  h3 {
+    // card headers
+    color: black;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  &__img {
+    @include vertically-center;
+    img {
+      display: block;
+      width: 70%;
+      max-width: 70%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__form {
+  }
+}
+
+.order-row {
+  margin-bottom: 0.7rem;
+  @include respond-to(screen-md) {
+    @include flexbox;
+    @include justify-content(space-between);
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+
+  label {
+    color: #999;
+  }
+
+  label,
+  input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+
+  input {
+    height: 3rem;
+    font-size: 1.5em;
+    border: 0;
+    border-bottom: 0.15rem solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0 0.2rem;
+    cursor: text;
+
+    &:focus {
+      outline: 0;
+      border-bottom: 0.15rem solid #666;
+    }
+
+    &:placeholder-shown + label {
+      cursor: text;
+      white-space: nowrap;
+      overflow: hidden;
+      transform-origin: left bottom;
+      transform: translate(0.3rem, 2.125rem) scale(1.3);
+      text-overflow: ellipsis;
+    }
+
+    &:not(:placeholder-shown) + label,
+    &:focus + label {
+      transform: translate(0, -0.2rem) scale(1);
+      cursor: default;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      opacity: 1;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}

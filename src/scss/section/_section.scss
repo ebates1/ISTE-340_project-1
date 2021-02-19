@@ -3,7 +3,9 @@
     font-size: 1.5rem;
     color: $header-text-color;
     font-family: $header-font;
-    margin-bottom: 3rem;
+    @include respond-to(screen-md) {
+      margin-bottom: 3rem;
+    }
   }
 }
 

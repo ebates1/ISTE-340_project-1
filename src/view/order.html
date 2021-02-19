@@ -1,0 +1,190 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <script defer src="../script/pages/order.js"></script>
+    <link rel="stylesheet" href="../scss/app.scss" />
+  </head>
+  <body class="body bg-image">
+    <div class="bg-blur"></div>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__container">
+          <a href="">
+            <picture class="nav__logo">
+              <source srcset="/res/img/unconverted/logo2.png" type="image/avif" />
+              <img src="/res/img/unconverted/logo2.png" class="nav__logo" />
+            </picture>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- <section class="order container">
+        <div class="order__box">
+          <div class="order__left">
+            <picture>
+              <source srcset="/res/img/unconverted/wordpress.svg" type="image/avif" />
+              <img src="/res/img/unconverted/cpanel.jpg" alt="" />
+            </picture>
+          </div>
+          <div class="order__right">
+            <div class="order__summary">
+              <h3>Order Summary</h3>
+              <div class="order__row">
+                <p>Package name:</p>
+                <p id="packageName" class="bold"></p>
+              </div>
+              <div class="order__row">
+                <p>Subtotal:</p>
+                <p id="packageCost"></p>
+              </div>
+              <div class="order__row">
+                <p>Discount:</p>
+                <p>0%</p>
+              </div>
+
+              <div class="order__row">
+                <p>Tax:</p>
+                <p id="packageTax"></p>
+              </div>
+              <div class="order__row order__total">
+                <p>TOTAL</p>
+                <p id="packageFinalPrice"></p>
+              </div>
+            </div>
+            <form class="order__form" action="">
+              <h3>My Information</h3>
+              <div class="field">
+                <input type="text" placeholder="Name" required />
+              </div>
+              <div class="field">
+                <input type="text" placeholder="Name" required />
+              </div>
+              <div class="field">
+                <input type="text" placeholder="Name" required />
+              </div>
+
+              <input placeholder="Email" type="email" required="" />
+              <input placeholder="Phone Number" type="text" required="" />
+              <input placeholder="Card Number" type="text" required="" />
+              <div>
+                <button>Cancel</button>
+                <button>Submit Order</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section> -->
+
+      <section id="checkout">
+        <div class="container">
+          <div class="checkout-box">
+            <div class="checkout-box__img">
+              <picture id="packageImage">
+                <source srcset="/res/img/unconverted/wordpress.svg" type="image/avif" />
+                <img src="/res/img/unconverted/cpanel.jpg" alt="" />
+              </picture>
+            </div>
+            <div class="checkout-box__summary">
+              <h3>Order Summary</h3>
+              <div class="order-row">
+                <p>Package name:</p>
+                <p id="packageName" class="bold"></p>
+              </div>
+              <div class="order-row">
+                <p>Subtotal:</p>
+                <p id="packageCost"></p>
+              </div>
+              <div class="order-row">
+                <p>Discount:</p>
+                <p>0%</p>
+              </div>
+              <div class="order-row">
+                <p>Tax:</p>
+                <p id="packageTax"></p>
+              </div>
+              <div class="order-row">
+                <h3>TOTAL</h3>
+                <h3 id="packageFinalPrice"></h3>
+              </div>
+            </div>
+            <div class="checkout-box__form">
+              <h3>Complete your order details</h3>
+              <form class="order__form" action="">
+                <div class="form-row">
+                  <input
+                    type="text"
+                    name="formName"
+                    id="formName"
+                    placeholder="John Doe"
+                    required
+                  />
+                  <label for="formName">Name</label>
+                </div>
+                <div class="form-row">
+                  <input
+                    type="text"
+                    name="formEmail"
+                    id="formEmail"
+                    placeholder="john.doe@gmail.com"
+                    required
+                  />
+                  <label for="formEmail">Email Address</label>
+                </div>
+                <div class="form-row">
+                  <input
+                    type="text"
+                    name="formPhoneNum"
+                    id="formPhoneNum"
+                    placeholder="+ 385 (0) 20 433 000"
+                    required
+                  />
+                  <label for="formPhoneNum">Phone Number</label>
+                </div>
+                <div class="form-row">
+                  <input
+                    type="text"
+                    name="formDiscount"
+                    id="formDiscount"
+                    placeholder="chinesevirus"
+                  />
+                  <label for="formDiscount">Discount Code</label>
+                </div>
+                <button class="landing__linkbutton" id="orderBtn">Submit Order</button>
+              </form>
+            </div>
+            <div class="checkout-box__features"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer pb-10" data-aos="fade-in" data-aos-duration="1000">
+      <div class="container">
+        <p>
+          © 2021
+          <span><a href="https://github.com/ebates1" target="_blank">Eli Bates</a></span>
+        </p>
+        <p>
+          This project was made for the course ISTE-340 at
+          <span><a href="https://www.croatia.rit.edu/" target="_blank"> RIT Croatia</a></span>
+        </p>
+
+        <p>
+          Check my performance score on
+          <span
+            ><a
+              href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fiste-340-project-1.netlify.app%2F&tab=mobile"
+              target="_blank"
+              >Google PageSpeed Insights</a
+            ></span
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

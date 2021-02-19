@@ -3,10 +3,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyWebhost - Hosting & Servers</title>
-    <link rel="stylesheet" href="src/scss/app.scss" />
-    <script defer src="src/script/app.js"></script>
+    <script defer src="../script/pages/index.js"></script>
+    <script defer src="../script/mvc/app.js"></script>
+    <link rel="stylesheet" href="../scss/app.scss">
   </head>
-  <body class="body bg-image">
+  <body class="body">
     <div class="bg-blur"></div>
     <header class="header">
       <nav class="nav">
@@ -146,13 +147,15 @@
             <div class="pane row">
               <div class="pane__selection col-2">
                 <div class="pane__selects"></div>
-                <a id="orderBtn" class="hidden" href="/order.html">Submit</a>
+                <button class="landing__linkbutton mr-auto hidden" id="orderBtn">
+                  Order
+                </button>
               </div>
               <div class="pane__view col-2">
                 <picture>
                   <source
                     srcset="/res/img/avif/cpanel.avif"
-                    type="image/avif"
+                    type="image/png"
                   />
                   <img src="/res/img/unconverted/cpanel.jpg" alt="" />
                 </picture>
@@ -161,6 +164,7 @@
           </div>
         </div>
       </section>
+
     </main>
 
     <footer class="footer pb-10" data-aos="fade" data-aos-duration="1000">

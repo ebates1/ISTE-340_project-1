@@ -1,11 +1,11 @@
 {
-  "name": "MyWebhost",
+  "name": "My Webhost",
   "version": "1.0.0",
   "description": "ISTE-340 Client Programming - Project 1",
   "default": "index.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "rm -rf dist & parcel build index.html --dist-dir dist/"
+    "start": "parcel src/view/*.html",
+    "build": "rm -rf dist & parcel build src/view/*.html --dist-dir dist/"
   },
   "keywords": [],
   "author": "Eli Bates",

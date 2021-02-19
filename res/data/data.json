@@ -14,7 +14,8 @@
     "id": 2,
     "value": "Dedicated Server",
     "children": [5, 6],
-    "title": "Select a service"
+    "title": "Select a service",
+    "image": "res/img/unconverted/product-server.png"
   },
   {
     "id": 3,
@@ -32,78 +33,113 @@
     "id": 5,
     "value": "Windows Server",
     "children": [11, 12],
-    "title": "What Operating System do you want?"
+    "title": "What Operating System do you want?",
+    "image": "res/img/unconverted/product-server-windows.png"
   },
   {
     "id": 6,
     "value": "Linux Server",
     "children": [13, 14],
-    "title": "What Operating System do you want?"
+    "title": "What Operating System do you want?",
+    "image": "res/img/unconverted/product-server-linux.png"
   },
   {
     "id": 7,
     "value": "100 GB storage",
-    "features": ["Standard Performance", "1 Website", "100 GB storage", "500 GB bandwidth"],
-    "cost": 5.99,
-    "title": "How much storage do you need?"
+
+    "title": "How much storage do you need?",
+    "sale-data": {
+      "cost": 5.99,
+      "title": "Personal Web Hosting - 100 GB (monthly)",
+      "features": ["Standard Performance", "1 Website", "100 GB storage", "500 GB bandwidth"]
+    }
   },
   {
     "id": 8,
     "value": "1 TB Storage",
-    "features": ["Standard Performance", "Unlimited Websites", "1 TB storage", "1 TB bandwidth"],
-    "cost": 10.99,
-    "title": "How much storage do you need?"
+    "title": "How much storage do you need?",
+    "sale-data": {
+      "cost": 10.99,
+      "title": "Personal Web Hosting - 1 TB (monthly)",
+      "features": ["Standard Performance", "Unlimited Websites", "1 TB storage", "1 TB bandwidth"]
+    }
   },
   {
     "id": 9,
     "value": "1 TB Bandwidth",
-    "features": [
-      "Increased Performance",
-      "Unlimited Websites",
-      "Unlimited storage",
-      "1 TB bandwidth"
-    ],
-    "cost": 20.99,
-    "title": "How much bandwidth do you need?"
+    "title": "How much bandwidth do you need?",
+    "sale-data": {
+      "cost": 20.99,
+      "title": "Business Web Hosting - 1 TB Bandwidth (monthly)",
+      "features": [
+        "Increased Performance",
+        "Unlimited Websites",
+        "Unlimited storage",
+        "1 TB bandwidth"
+      ]
+    }
   },
   {
     "id": 10,
     "value": "Unmetered Bandwidth",
-    "features": [
-      "Increased Performance",
-      "Unlimited Websites",
-      "Unlimited storage",
-      "Unmetered bandwidth"
-    ],
-    "cost": 35.99,
-    "title": "How much bandwidth do you need?"
+    "title": "How much bandwidth do you need?",
+    "sale-data": {
+      "cost": 35.99,
+      "title": "Business Webhosting - Unmetered Bandwidth (monthly)",
+      "features": [
+        "Increased Performance",
+        "Unlimited Websites",
+        "Unlimited storage",
+        "Unmetered bandwidth"
+      ]
+    }
   },
   {
     "id": 11,
     "value": "Intel(R) Xeon(R) @ 3.10GHz",
-    "features": ["Windows Server", "32GB DDR3 RAM", "500GB SATA Storage", "10TB bandwidth"],
-    "cost": 24.99,
-    "title": "Select a CPU"
+    "title": "Select a CPU",
+    "sale-data": {
+      "title": "Windows Server - 3.10GHz (monthly)",
+      "features": ["Windows Server", "32GB DDR3 RAM", "500GB SATA Storage", "10TB bandwidth"],
+      "cost": 24.99,
+      "image": "res/img/unconverted/product-server-windows-silver.png"
+    },
+    "image": "res/img/unconverted/product-server-windows-silver.png"
   },
   {
     "id": 12,
     "value": "Intel(R) Xeon(R) @ 3.50GHz",
-    "features": ["Windows Server", "32GB DDR3 RAM", "1TB SATA Storage", "10TB bandwidth"],
-    "cost": 34.99,
-    "title": "Select a CPU"
+    "title": "Select a CPU",
+    "sale-data": {
+      "title": "Windows Server - 3.50GHz (monthly)",
+      "features": ["Windows Server", "32GB DDR3 RAM", "1TB SATA Storage", "10TB bandwidth"],
+      "cost": 34.99,
+      "image": "res/img/unconverted/product-server-windows-gold.png"
+    },
+    "image": "res/img/unconverted/product-server-windows-gold.png"
   },
   {
     "id": 13,
     "value": "AMD EPYC @ 2.90GHz",
-    "features": ["Linux Server", "32GB DDR3 RAM", "1TB SSD Storage", "15TB bandwidth"],
-    "cost": 49.99,
-    "title": "Select a CPU"
+    "title": "Select a CPU",
+    "sale-data": {
+      "title": "Linux Server - 2.9GHz (monthly)",
+      "features": ["CentOS Server", "32GB DDR3 RAM", "1TB SSD Storage", "15TB bandwidth"],
+      "cost": 49.99,
+      "image": "res/img/unconverted/product-server-linux-amd.png"
+    },
+    "image": "res/img/unconverted/product-server-linux-amd.png"
   },
   {
     "id": 14,
     "value": "Intel(E) Xeon(E) @ 4.5GHz",
-    "features": ["Linux Server", "32GB DDR3 RAM", "500GB SSD Storage", "10TB bandwidth"],
-    "cost": 43.99,
-    "title": "Select a CPU"
+    "title": "Select a CPU",
+    "sale-data": {
+      "title": "Linux Server - 4.5Ghz (monthly)",
+      "features": ["CentOS Server", "32GB DDR3 RAM", "500GB SSD Storage", "10TB bandwidth"],
+      "cost": 43.99,
+      "image": "res/img/unconverted/product-server-linux-intel.png"
+    },
+    "image": "res/img/unconverted/product-server-linux-intel.png"
   }
 ]

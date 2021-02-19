@@ -32,7 +32,7 @@ $navbar-color: #14172bf5;
 $navbar-link-color: rgb(199, 199, 199);
 $navbar-link-hover: #fff;
 
-$section-color: #123499a1;
+$section-color: #123499;
 $feature-cards-color: $section-color;
 
 $header-text-color: rgb(0, 0, 0);
@@ -221,4 +221,8 @@ h3 {
 .hidden {
   display: none;
   pointer-events: none;
+}
+
+.bold {
+  font-weight: bold;
 }

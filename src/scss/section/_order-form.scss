@@ -1,89 +1,8 @@
-.order {
-  width: 100%;
-  @include vertically-center;
-  position: relative;
-  height: calc(100vh - 100px);
-
-  &__box {
-    z-index: 2;
-    width: 50%;
-    height: 65%;
-    background-color: rgba(255, 255, 255, 0.831);
-    border-radius: 0.5rem;
-    box-shadow: $shadow;
-    @include flexbox;
-  }
-
-  &__left {
-    height: 100%;
-    width: 50%;
-    img {
-      display: block;
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      -webkit-transition: all 1s ease;
-      transition: all 1s ease;
-      @include respond-to(screen-md) {
-        // object-fit: cover;
-        // object-position: top left;
-        max-width: 100%;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        height: 100%;
-        max-width: 100%;
-      }
-    }
-  }
-
-  &__right {
-    height: 100%;
-    width: 50%;
-    padding-right: 1rem;
-  }
-
-  &__summary {
-    height: 30%;
-    padding: 1rem 0.5rem 0.5rem 0;
-    @include flexbox;
-    @include flex-direction(column);
-
-    h3 {
-      color: black;
-      font-size: 1.9rem;
-      margin-bottom: 1rem;
-    }
-  }
-
-  &__form {
-    @include flexbox;
-    @include flex-direction(column);
-  }
-
-  &__row {
-    width: 100%;
-    @include flexbox;
-    @include justify-content(space-between);
-    margin-bottom: 0.4rem;
-    font-size: 1rem;
-    font-family: $header-font;
-  }
-
-  &__total {
-    font-size: 1.4rem;
-    margin-top: 1rem;
-    font-weight: bold;
-  }
-
-  &__form {
-    height: 70%;
-    width: 100%;
-    @include flexbox;
-    @include flex-direction(column);
-    input {
-    }
-  }
+@mixin grid-card {
+  border-radius: 0.4rem;
+  padding: 1rem;
+  box-shadow: $shadow;
+  background-color: whitesmoke;
 }
 
 $field-height: 3rem;
@@ -91,9 +10,8 @@ $field-height: 3rem;
 .field {
   position: relative;
   height: $field-height;
-  width: 65%;
   font-family: $header-font;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 
   .placeholder {
     position: absolute;
@@ -105,7 +23,6 @@ $field-height: 3rem;
 
   input {
     height: 100%;
-    padding: 0.75rem 0;
     width: 100%;
     border: none;
     border-bottom: 0.1rem solid blue;
@@ -130,4 +47,159 @@ $field-height: 3rem;
 
 .message {
   color: red;
+}
+
+#checkout {
+  height: auto;
+  @include respond-to(screen-md) {
+    height: calc(100vh - 8rem);
+  }
+}
+
+/* order form positioning */
+.checkout-box {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  row-gap: 0.5rem;
+  grid-template-columns: auto 48% 48% auto;
+  grid-template-rows: repeat(6, auto);
+
+  @include respond-to(screen-md) {
+    column-gap: 0.5rem;
+    grid-template-columns: auto 15% 20% 25% 25% auto;
+    grid-template-rows: auto 15% 15% 15% 15% 15% 15% auto;
+  }
+
+  &__img {
+    @include grid-card;
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+
+    @include respond-to(screen-md) {
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 3;
+    }
+  }
+
+  &__features {
+    @include grid-card;
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+
+    @include respond-to(screen-md) {
+      grid-column: 2 / span 2;
+      grid-row: 5 / span 3;
+    }
+  }
+
+  &__summary {
+    @include grid-card;
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+
+    @include respond-to(screen-md) {
+      grid-column: 4 / span 2;
+      grid-row: 2 / span 2;
+    }
+  }
+
+  &__form {
+    @include grid-card;
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 2;
+
+    @include respond-to(screen-md) {
+      grid-column: 4 / span 2;
+      grid-row: 4 / span 4;
+    }
+  }
+}
+
+.checkout-box {
+  font-family: $header-font;
+  h3 {
+    // card headers
+    color: black;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  &__img {
+    @include vertically-center;
+    img {
+      display: block;
+      width: 70%;
+      max-width: 70%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__form {
+  }
+}
+
+.order-row {
+  margin-bottom: 0.7rem;
+  @include respond-to(screen-md) {
+    @include flexbox;
+    @include justify-content(space-between);
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+
+  label {
+    color: #999;
+  }
+
+  label,
+  input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+
+  input {
+    height: 3rem;
+    font-size: 1.5em;
+    border: 0;
+    border-bottom: 0.15rem solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0 0.2rem;
+    cursor: text;
+
+    &:focus {
+      outline: 0;
+      border-bottom: 0.15rem solid #666;
+    }
+
+    &:placeholder-shown + label {
+      cursor: text;
+      white-space: nowrap;
+      overflow: hidden;
+      transform-origin: left bottom;
+      transform: translate(0.3rem, 2.125rem) scale(1.3);
+      text-overflow: ellipsis;
+    }
+
+    &:not(:placeholder-shown) + label,
+    &:focus + label {
+      transform: translate(0, -0.2rem) scale(1);
+      cursor: default;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      opacity: 1;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
 }

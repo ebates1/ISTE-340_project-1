@@ -10,7 +10,16 @@ export class Controller {
     this._selected = 0;
 
     this.initSelects(3); // build the selects
-    this.initSelectListeners(); // attach the listeners
+    this.initListeners();
+  }
+
+  initListeners() {
+    this.initSelectListeners(); // attach the select listeners
+    this.initButtonListeners();
+  }
+
+  initButtonListeners() {
+    this._view.orderBtn.addEventListener('click', () => this.handleSubmitButton());
   }
 
   /* initialize the on change listeners for the selects */
@@ -25,25 +34,17 @@ export class Controller {
     console.log(id + ' was changed!');
 
     console.log('the next select should be ' + value);
+    this._view.setImagePath(this._model.getId(Number(value))['image']);
     if (id < this._view.selects.length - 1) {
       this.clearChildSelects(id);
       this.populateSelect(id + 1, value);
       this._view.hideOrderButton();
     } else {
+      console.log('getting local data for storage');
+      console.log(value);
+      this._saleData = this._model.getId(Number(value))['sale-data'];
       this._view.showOrderButton();
     }
-
-    /*
-      if the select is the last one (3) -> {
-        setImage
-        activateSubmitButton
-      } else {
-        clearChildren
-        getChildren
-        populateSelect(children)
-        setImage
-      }
-    */
   }
 
   /* Gets children of selected option */
@@ -88,12 +89,8 @@ export class Controller {
 
   /* Handles clicking of the submit button */
   handleSubmitButton() {
-    /*
-      if ready to submit
-      save select as a cookie
-      navigate to checkout url
-      else
-      disableSubmitButton
-    */
+    localStorage.clear();
+    localStorage.setItem('sale-data', JSON.stringify(this._saleData));
+    window.open('./order.html', '_self');
   }
 }

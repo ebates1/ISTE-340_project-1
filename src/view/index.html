@@ -1,121 +1,103 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyWebhost - Hosting & Servers</title>
-    <script defer src="../script/pages/index.js"></script>
-    <script defer src="../script/mvc/app.js"></script>
-    <link rel="stylesheet" href="../scss/app.scss">
-  </head>
-  <body class="body">
-    <div class="bg-blur"></div>
-    <header class="header">
-      <nav class="nav">
-        <div class="nav__container">
-          <a href="">
-            <picture class="nav__logo">
-              <source
-                srcset="/res/img/unconverted/logo2.png"
-                type="image/avif"
-              />
-              <img src="/res/img/unconverted/logo2.png" class="nav__logo" />
-            </picture>
-          </a>
-          <ul class="nav-list">
-            <li class="nav-list__item">
-              <a href="#services" class="nav-list__link">Services</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#order" class="nav-list__link">About</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#order" class="nav-list__link">Order</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
 
-    <main>
-      <!-- The landing for the page -->
-      <section id="landing" class="landing bg-image">
-        <div class="container row mb-5">
-          <div class="col-2 p-2">
-            <h1 class="landing__title mb-1">Simple Web Hosting</h1>
-            <p class="landing__text mb-1">
-              <span class="highlight">Lorem</span>
-              ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-              necessitatibus?
-            </p>
-            <button class="landing__linkbutton mr-auto" id="landing-button">
-              GET STARTED
-            </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyWebhost - Hosting & Servers</title>
+  <script defer src="../script/mvc/app.js"></script>
+  <link rel="stylesheet" href="../scss/app.scss">
+</head>
+
+<body class="body">
+  <div class="bg-blur"></div>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__container">
+        <a href="">
+          <picture class="nav__logo">
+            <source srcset="/res/img/unconverted/logo2.png" type="image/avif" />
+            <img src="/res/img/unconverted/logo2.png" class="nav__logo" />
+          </picture>
+        </a>
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="#services" class="nav-list__link">Services</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#order" class="nav-list__link">About</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#order" class="nav-list__link">Order</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- The landing for the page -->
+    <section id="landing" class="landing bg-image">
+      <div class="container row mb-5">
+        <div class="col-2 p-2">
+          <h1 class="landing__title mb-1">Simple Web Hosting</h1>
+          <p class="landing__text mb-1">
+            MyWebhost &trade; offers a simple, yet affordable solution to modern webhosting. Our industry standard
+            technology, and top tier customer support ensure you are covered.
+          </p>
+          <button class="landing__linkbutton mr-auto" id="landing-button">
+            GET STARTED
+          </button>
+        </div>
+        <div class="col-1 p-2"></div>
+      </div>
+    </section>
+
+    <!-- cards showing features -->
+    <section id="services" class="section colored feature-cards">
+      <div class="container">
+        <h2 class="section__title text-center" data-aos="zoom-in" data-aos-duration="1000">Included Hosting Features
+        </h2>
+        <div class="row">
+          <div class="col-1">
+            <div class="fancy-card" data-aos="zoom-in" data-aos-duration="1000">
+              <picture>
+                <source srcset="/res/img/avif/cpanel.avif" type="image/avif" />
+                <img src="/res/img/unconverted/cpanel.jpg" alt="cpanel user interface" />
+              </picture>
+              <div class="fancy-card__title">
+                <div>
+                  <h3>Integrated cPanel</h3>
+                  <p class="show-on-hover">
+                    Access to industry standard cPanel software to manage your
+                    hosting.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-1 p-2"></div>
-        </div>
-      </section>
-
-      <!-- cards showing features -->
-      <section id="services" class="section colored feature-cards">
-        <div class="container">
-          <h2 class="section__title text-center" data-aos="zoom-in"
-          data-aos-duration="1000">Included Hosting Features</h2>
-          <div class="row">
-            <div class="col-1">
-              <div class="fancy-card"             data-aos="zoom-in"
-              data-aos-duration="1000">
-                <picture>
-                  <source
-                    srcset="/res/img/avif/cpanel.avif"
-                    type="image/avif"
-                  />
-                  <img
-                    src="/res/img/unconverted/cpanel.jpg"
-                    alt="cpanel user interface"
-                  />
-                </picture>
-                <div class="fancy-card__title">
-                  <div>
-                    <h3>Integrated cPanel</h3>
-                    <p class="show-on-hover">
-                      Access to industry standard cPanel software to manage your
-                      hosting.
-                    </p>
-                  </div>
+          <div class="col-1">
+            <div class="fancy-card" data-aos="zoom-in" data-aos-duration="1000">
+              <picture>
+                <source srcset="/res/img/avif/server-support.avif" type="image/avif" />
+                <img src="/res/img/unconverted/server-support.jpg" alt="" />
+              </picture>
+              <div class="fancy-card__title">
+                <div>
+                  <h3>Fast Support</h3>
+                  <p class="show-on-hover">
+                    Our technicians work tirelessly to ensure that your site
+                    is running properly. Support is available 24/7 on our
+                    website.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-1">
-              <div class="fancy-card"             data-aos="zoom-in"
-              data-aos-duration="1000">
-                <picture>
-                  <source
-                    srcset="/res/img/avif/server-support.avif"
-                    type="image/avif"
-                  />
-                  <img src="/res/img/unconverted/server-support.jpg" alt="" />
-                </picture>
-                <div class="fancy-card__title">
-                  <div>
-                    <h3>Fast Support</h3>
-                    <p class="show-on-hover">
-                      Our technicians work tirelessly to ensure that your site
-                      is running properly. Support is available 24/7 on our
-                      website.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-1">
-              <div class="fancy-card"             data-aos="zoom-in"
-              data-aos-duration="1000">
-                <picture>
-                  <source
-                    srcset="/res/img/avif/apps.avif"
-                    type="image/avif"
-                  />
-                  <img src="/res/img/unconverted/apps.jpg" alt="an app webstore" />
+          </div>
+          <div class="col-1">
+            <div class="fancy-card" data-aos="zoom-in" data-aos-duration="1000">
+              <picture>
+                <source srcset="/res/img/avif/apps.avif" type="image/avif" />
+                <img src="/res/img/unconverted/apps.jpg" alt="an app webstore" />
                 <div class="fancy-card__title">
                   <div>
                     <h3>Installable Apps</h3>
@@ -126,92 +108,71 @@
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <h2 class="section__title text-center mt-5" data-aos="zoom-in"
-          data-aos-duration="1000">Our Company</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam explicabo minus soluta ea quasi quia et numquam fuga fugiat accusamus?</p>
-        </div>
-      </section>
-
-      <!-- The option selects for the product -->
-      <section id="order" class="colored">
-        <div class="container">
-          <div
-            class="product-selection mx-auto"
-            data-aos="fade" 
-            data-aos-duration="1200"
-          >
-            <h2 class="section__title">Product Selection</h2>
-            <div class="pane row">
-              <div class="pane__selection col-2">
-                <div class="pane__selects"></div>
-                <button class="landing__linkbutton mr-auto hidden" id="orderBtn">
-                  Order
-                </button>
-              </div>
-              <div class="pane__view col-2">
-                <picture>
-                  <source
-                    srcset="/res/img/avif/cpanel.avif"
-                    type="image/png"
-                  />
-                  <img src="/res/img/unconverted/cpanel.jpg" alt="" />
-                </picture>
-              </div>
             </div>
           </div>
         </div>
-      </section>
 
-    </main>
+    </section>
 
-    <footer class="footer pb-10" data-aos="fade" data-aos-duration="1000">
-      <div class="container">
-        <p>
-          © 2021
-          <span
-            ><a href="https://github.com/ebates1" target="_blank"
-              >Eli Bates</a
-            ></span
-          >
-        </p>
-        <p>
-          This project was made for the course ISTE-340 at
-          <span
-            ><a href="https://www.croatia.rit.edu/" target="_blank">
-              RIT Croatia</a
-            ></span
-          >
-        </p>
-
-        <p>
-          Check my performance score on
-          <span
-            ><a
-              href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fiste-340-project-1.netlify.app%2F&tab=mobile"
-              target="_blank"
-              >Google PageSpeed Insights</a
-            ></span
-          >
-        </p>
-
-        <!-- <div class="footer__logobar">
-          <picture class="">
-            <source srcset="/res/img/avif/logo.avif" type="image/avif" />
-            <img src="/res/img/webp/logo.webp" class="" alt="MyWebhost logo" />
-          </picture>
-          <picture class="">
-            <source srcset="/res/img/avif/rit-logo.avif" type="image/avif" />
-            <img
-              src="/res/img/webp/rit-logo.webp"
-              class=""
-              alt="RIT Croatia Logo"
-            />
-          </picture>
-        </div> -->
+    <!-- about section -->
+    <section class="section colored">
+      <div class="container" data-aos="fade-up" data-aos-duration="800">
+        <div>
+          <h2 class="section__title text-center mt-5" data-aos="zoom-in" data-aos-duration="1000">Our Company</h2>
+          <p>For more than 20 years, MyWebhost &trade; has been changing the way people host websites. </p>
+          <p>In the process, we have built one of the largest recognized hosting brands and today we are one of the most
+            valuable hosting companies worldwide. Founded in 2001 as one of the first independent webhosting companies,
+            we launched a series of multi-million dollar server facilities. </p>
+          <p>We currently operate in more than 15 countries, including the U.S, Canada, Mexico and Most of Europe.</p>
+        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <!-- The option selects for the product -->
+    <section id="order" class="colored">
+      <div class="container">
+        <div class="product-selection mx-auto" data-aos="fade" data-aos-duration="1200">
+          <h2 class="section__title">Product Selection</h2>
+          <div class="pane row">
+            <div class="pane__selection col-2">
+              <div class="pane__selects"></div>
+              <button class="landing__linkbutton mr-auto hidden" id="orderBtn">
+                Order
+              </button>
+            </div>
+            <div class="pane__view col-2">
+              <picture>
+                <source srcset="/res/img/avif/cpanel.avif" type="image/png" />
+                <img src="/res/img/unconverted/cpanel.jpg" alt="" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer pb-10" data-aos="fade" data-aos-duration="1000">
+    <div class="container">
+      <p>
+        © 2021
+        <span><a href="https://github.com/ebates1" target="_blank">Eli Bates</a></span>
+      </p>
+      <p>
+        This project was made for the course ISTE-340 at
+        <span><a href="https://www.croatia.rit.edu/" target="_blank">
+            RIT Croatia</a></span>
+      </p>
+
+      <p>
+        Check my performance score on
+        <span><a
+            href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fiste-340-project-1.netlify.app%2F&tab=mobile"
+            target="_blank">Google PageSpeed Insights</a></span>
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>

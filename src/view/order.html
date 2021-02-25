@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
     <script defer src="../script/pages/order.js"></script>
+    <script defer src="../script/pages/form.js"></script>
     <link rel="stylesheet" href="../scss/app.scss" />
   </head>
   <body class="body bg-image">
@@ -23,63 +24,6 @@
     </header>
 
     <main>
-      <!-- <section class="order container">
-        <div class="order__box">
-          <div class="order__left">
-            <picture>
-              <source srcset="/res/img/unconverted/wordpress.svg" type="image/avif" />
-              <img src="/res/img/unconverted/cpanel.jpg" alt="" />
-            </picture>
-          </div>
-          <div class="order__right">
-            <div class="order__summary">
-              <h3>Order Summary</h3>
-              <div class="order__row">
-                <p>Package name:</p>
-                <p id="packageName" class="bold"></p>
-              </div>
-              <div class="order__row">
-                <p>Subtotal:</p>
-                <p id="packageCost"></p>
-              </div>
-              <div class="order__row">
-                <p>Discount:</p>
-                <p>0%</p>
-              </div>
-
-              <div class="order__row">
-                <p>Tax:</p>
-                <p id="packageTax"></p>
-              </div>
-              <div class="order__row order__total">
-                <p>TOTAL</p>
-                <p id="packageFinalPrice"></p>
-              </div>
-            </div>
-            <form class="order__form" action="">
-              <h3>My Information</h3>
-              <div class="field">
-                <input type="text" placeholder="Name" required />
-              </div>
-              <div class="field">
-                <input type="text" placeholder="Name" required />
-              </div>
-              <div class="field">
-                <input type="text" placeholder="Name" required />
-              </div>
-
-              <input placeholder="Email" type="email" required="" />
-              <input placeholder="Phone Number" type="text" required="" />
-              <input placeholder="Card Number" type="text" required="" />
-              <div>
-                <button>Cancel</button>
-                <button>Submit Order</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section> -->
-
       <section id="checkout">
         <div class="container">
           <div class="checkout-box">
@@ -114,54 +58,142 @@
             </div>
             <div class="checkout-box__form">
               <h3>Complete your order details</h3>
-              <form class="order__form" action="">
+              <form class="order__form" name="orderForm" action="">
                 <div class="form-row">
-                  <input
-                    type="text"
-                    name="formName"
-                    id="formName"
-                    placeholder="John Doe"
-                    required
-                  />
-                  <label for="formName">Name</label>
+                  <label for="formName">Name </label>
+                  <input type="text" name="formName" id="formName" required />
+                  <p></p>
+                  <svg
+                    class="svgError"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <svg
+                    class="svgSuccess"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                 </div>
                 <div class="form-row">
-                  <input
-                    type="text"
-                    name="formEmail"
-                    id="formEmail"
-                    placeholder="john.doe@gmail.com"
-                    required
-                  />
                   <label for="formEmail">Email Address</label>
+                  <input type="text" name="formEmail" id="formEmail" required />
+                  <p></p>
+                  <svg
+                    class="svgError"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <svg
+                    class="svgSuccess"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                 </div>
                 <div class="form-row">
-                  <input
-                    type="text"
-                    name="formPhoneNum"
-                    id="formPhoneNum"
-                    placeholder="+ 385 (0) 20 433 000"
-                    required
-                  />
-                  <label for="formPhoneNum">Phone Number</label>
+                  <label for="formPhoneNumber">Phone Number</label>
+                  <input type="text" name="formPhoneNumber" id="formPhoneNumber" required />
+                  <p></p>
+                  <svg
+                    class="svgError"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <svg
+                    class="svgSuccess"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                 </div>
                 <div class="form-row">
-                  <input
-                    type="text"
-                    name="formDiscount"
-                    id="formDiscount"
-                    placeholder="chinesevirus"
-                  />
                   <label for="formDiscount">Discount Code</label>
+                  <input type="text" name="formDiscount" id="formDiscount" />
+                  <p></p>
+                  <svg
+                    class="svgError"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <svg
+                    class="svgSuccess"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                 </div>
-                <button class="landing__linkbutton" id="orderBtn">Submit Order</button>
+                <div>
+                  <button class="" id="orderBtn">Submit Order</button>
+                  <button class="" id="cancelBtn">Cancel</button>
+                </div>
               </form>
             </div>
-            <div class="checkout-box__features"></div>
           </div>
         </div>
       </section>
     </main>
+
+    <div class="modal" id="modal-one">
+      <div class="modal-bg modal-exit"></div>
+      <div class="modal-container">
+        <h1>Amazing Modal</h1>
+        <h2>Pure Vanilla JavaScript</h2>
+        <button class="modal-close modal-exit">X</button>
+      </div>
+    </div>
 
     <footer class="footer pb-10" data-aos="fade-in" data-aos-duration="1000">
       <div class="container">

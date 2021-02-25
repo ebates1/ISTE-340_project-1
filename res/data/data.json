@@ -8,7 +8,8 @@
     "id": 1,
     "value": "Web Hosting",
     "children": [3, 4],
-    "title": "Select a service"
+    "title": "Select a service",
+    "image": "res/img/unconverted/product-web.jpg"
   },
   {
     "id": 2,
@@ -21,13 +22,15 @@
     "id": 3,
     "value": "Personal",
     "children": [7, 8],
-    "title": "Select package"
+    "title": "Select package",
+    "image": "res/img/unconverted/product-web-personal.jpg"
   },
   {
     "id": 4,
     "value": "Business",
     "children": [9, 10],
-    "title": "Select package"
+    "title": "Select package",
+    "image": "res/img/unconverted/product-web-business.jpg"
   },
   {
     "id": 5,
@@ -46,13 +49,14 @@
   {
     "id": 7,
     "value": "100 GB storage",
-
     "title": "How much storage do you need?",
     "sale-data": {
       "cost": 5.99,
       "title": "Personal Web Hosting - 100 GB (monthly)",
-      "features": ["Standard Performance", "1 Website", "100 GB storage", "500 GB bandwidth"]
-    }
+      "features": ["Standard Performance", "1 Website", "100 GB storage", "500 GB bandwidth"],
+      "image": "res/img/unconverted/product-web-personal-100gb.jpg"
+    },
+    "image": "res/img/unconverted/product-web-personal-100gb.jpg"
   },
   {
     "id": 8,
@@ -61,8 +65,10 @@
     "sale-data": {
       "cost": 10.99,
       "title": "Personal Web Hosting - 1 TB (monthly)",
-      "features": ["Standard Performance", "Unlimited Websites", "1 TB storage", "1 TB bandwidth"]
-    }
+      "features": ["Standard Performance", "Unlimited Websites", "1 TB storage", "1 TB bandwidth"],
+      "image": "res/img/unconverted/product-web-personal-1tb.jpg"
+    },
+    "image": "res/img/unconverted/product-web-personal-1tb.jpg"
   },
   {
     "id": 9,
@@ -76,8 +82,10 @@
         "Unlimited Websites",
         "Unlimited storage",
         "1 TB bandwidth"
-      ]
-    }
+      ],
+      "image": "res/img/unconverted/product-web-business-1tb.jpg"
+    },
+    "image": "res/img/unconverted/product-web-business-1tb.jpg"
   },
   {
     "id": 10,
@@ -91,8 +99,10 @@
         "Unlimited Websites",
         "Unlimited storage",
         "Unmetered bandwidth"
-      ]
-    }
+      ],
+      "image": "res/img/unconverted/product-web-business-unlimited.jpg"
+    },
+    "image": "res/img/unconverted/product-web-business-unlimited.jpg"
   },
   {
     "id": 11,

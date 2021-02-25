@@ -5,50 +5,6 @@
   background-color: whitesmoke;
 }
 
-$field-height: 3rem;
-
-.field {
-  position: relative;
-  height: $field-height;
-  font-family: $header-font;
-  margin-bottom: 1rem;
-
-  .placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  }
-
-  input {
-    height: 100%;
-    width: 100%;
-    border: none;
-    border-bottom: 0.1rem solid blue;
-    background: none;
-    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-
-    &:focus {
-      outline: none;
-      border-bottom: 0.2rem solid blue;
-    }
-
-    &::-webkit-input-placeholder {
-      transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    }
-
-    &:focus::-webkit-input-placeholder {
-      color: blue;
-      transform: translateY(-1rem);
-    }
-  }
-}
-
-.message {
-  color: red;
-}
-
 #checkout {
   height: auto;
   @include respond-to(screen-md) {
@@ -56,18 +12,19 @@ $field-height: 3rem;
   }
 }
 
-/* order form positioning */
+/** order form positioning */
 .checkout-box {
-  height: 100%;
+  height: auto;
   width: 100%;
   display: grid;
   row-gap: 0.5rem;
   grid-template-columns: auto 48% 48% auto;
-  grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(10, auto);
 
   @include respond-to(screen-md) {
+    height: 100%;
     column-gap: 0.5rem;
-    grid-template-columns: auto 15% 20% 25% 25% auto;
+    grid-template-columns: auto 15% 20% 25% 15% auto;
     grid-template-rows: auto 15% 15% 15% 15% 15% 15% auto;
   }
 
@@ -78,18 +35,7 @@ $field-height: 3rem;
 
     @include respond-to(screen-md) {
       grid-column: 2 / span 2;
-      grid-row: 2 / span 3;
-    }
-  }
-
-  &__features {
-    @include grid-card;
-    grid-column: 2 / span 2;
-    grid-row: 4 / span 1;
-
-    @include respond-to(screen-md) {
-      grid-column: 2 / span 2;
-      grid-row: 5 / span 3;
+      grid-row: 4 / span 4;
     }
   }
 
@@ -99,7 +45,7 @@ $field-height: 3rem;
     grid-row: 5 / span 1;
 
     @include respond-to(screen-md) {
-      grid-column: 4 / span 2;
+      grid-column: 2 / span 4;
       grid-row: 2 / span 2;
     }
   }
@@ -107,7 +53,7 @@ $field-height: 3rem;
   &__form {
     @include grid-card;
     grid-column: 2 / span 2;
-    grid-row: 6 / span 2;
+    grid-row: 6 / span 4;
 
     @include respond-to(screen-md) {
       grid-column: 4 / span 2;
@@ -136,6 +82,16 @@ $field-height: 3rem;
     }
   }
   &__form {
+    button {
+      width: 100%;
+      height: 3rem;
+      font-size: 1rem;
+
+      @include respond-to(screen-md) {
+        width: auto;
+        height: 2rem;
+      }
+    }
   }
 }
 
@@ -147,59 +103,69 @@ $field-height: 3rem;
   }
 }
 
-.form-row {
-  display: flex;
-  flex-flow: column-reverse;
-  margin-bottom: 1em;
-
-  label {
-    color: #999;
-  }
-
-  label,
+.form-row.valid {
   input {
-    transition: all 0.2s;
-    touch-action: manipulation;
+    border: 0.15rem solid green;
   }
-
-  input {
-    height: 3rem;
-    font-size: 1.5em;
-    border: 0;
-    border-bottom: 0.15rem solid #ccc;
-    font-family: inherit;
-    -webkit-appearance: none;
-    border-radius: 0;
-    padding: 0 0.2rem;
-    cursor: text;
-
-    &:focus {
-      outline: 0;
-      border-bottom: 0.15rem solid #666;
-    }
-
-    &:placeholder-shown + label {
-      cursor: text;
-      white-space: nowrap;
-      overflow: hidden;
-      transform-origin: left bottom;
-      transform: translate(0.3rem, 2.125rem) scale(1.3);
-      text-overflow: ellipsis;
-    }
-
-    &:not(:placeholder-shown) + label,
-    &:focus + label {
-      transform: translate(0, -0.2rem) scale(1);
-      cursor: default;
-    }
-
-    &:focus::-webkit-input-placeholder {
-      opacity: 1;
-    }
+  p {
+    color: green;
+  }
+  .svgSuccess {
+    display: inline-block;
+  }
+  .svgError {
+    display: none;
   }
 }
 
-::-webkit-input-placeholder {
-  opacity: 0;
-  transition: inherit;
+.form-row.invalid {
+  input {
+    border: 0.15rem solid red;
+  }
+  p {
+    color: red;
+  }
+  .svgSuccess {
+    display: none;
+  }
+  .svgError {
+    display: inline-block;
+  }
+}
+
+.form-row {
+  @include flexbox;
+  @include flex-direction(column);
+  margin-bottom: 1em;
+  position: relative;
+
+  label {
+    color: black;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+  }
+
+  input {
+    margin-bottom: 0.3rem;
+    border-radius: 0.3rem;
+    padding: 0.4rem;
+  }
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    top: 1.75rem;
+    right: 10px;
+  }
+
+  .svgError {
+    color: red;
+    display: none;
+  }
+
+  .svgSuccess {
+    color: green;
+    display: none;
+  }
 }

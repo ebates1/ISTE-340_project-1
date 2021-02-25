@@ -1,13 +1,21 @@
+/**
+ * @class View
+ */
 export class View {
   constructor() {
     this.selectContainer = document.querySelector('.pane__selects');
-    this.selectHTML = (selectId) =>
-      `<div class="hidden" data-aos="fade-right"><h5>title</h5><select data-select="${selectId}" class="select"></select></div>`;
-    this.optionHTML = (value, text) => `<option value="${value}">${text}</option>`;
-    this.defaultOption = '<option disabled selected value> -- select an option -- </option>';
     this.orderBtn = document.querySelector('#orderBtn');
     this.imageContainer = document.querySelector('.pane__view > picture');
+    this.headerButton = document.querySelector('.landing__linkbutton');
+    this.logoButton = document.querySelector('nav__logo');
   }
+
+  selectHTML = (selectId) =>
+    `<div class="hidden" data-aos="fade-right"><h5>title</h5><select data-select="${selectId}" class="select"></select></div>`;
+
+  optionHTML = (value, text) => `<option value="${value}">${text}</option>`;
+
+  defaultOption = '<option disabled selected value> -- select an option -- </option>';
 
   addSelectToContainer = (selectId) => {
     this.insertAtEnd(this.selectContainer, this.selectHTML(selectId));

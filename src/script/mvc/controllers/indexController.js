@@ -9,34 +9,30 @@ export class Controller {
     this._view = view;
     this._selected = 0; // set initial selected to 0
     this.initSelects(3); // build the  3 selects (change to support more)
-    this.initListeners();
+    this.initClickListener();
+    this.initSelectListeners();
   }
 
   /**Initialize all types of listeners for the app */
-  initListeners() {
-    this.initSelectListeners();
-    this.initButtonListeners();
-    this.initNavListeners();
-  }
-
-  /**Initialize the button click listeners */
-  initButtonListeners() {
-    this._view.headerButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelector('#services').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    this._view.orderBtn.addEventListener('click', () => this.handleSubmitButton());
-  }
-
-  /**Initialize the click listeners for the navbar */
-  initNavListeners() {
-    document.querySelector('.nav-list').addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = e.target;
-      if (target.classList.contains('nav-list__link')) {
-        const id = e.target.getAttribute('href');
-        document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  initClickListener() {
+    // only initialize one click listener doing bubbling on the document (better performance)
+    document.addEventListener('click', (e) => {
+      switch (e.target.getAttribute('id')) {
+        case 'nav-list': // navigation links
+          e.preventDefault();
+          if (e.target.classList.contains('nav-list__link')) {
+            const id = e.target.getAttribute('href');
+            document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+          }
+          break;
+        case 'select-confirm-button': // selection confirmation
+          localStorage.clear();
+          localStorage.setItem('sale-data', JSON.stringify(this._saleData));
+          window.open('./order.html', '_self');
+          break;
+        case 'landing-button': // button in header
+          document.querySelector('#services').scrollIntoView({ behavior: 'smooth' });
+          break;
       }
     });
   }
@@ -87,12 +83,5 @@ export class Controller {
       this._view.setSelectTitle(selectId, item.title);
     });
     this._view.showSelect(selectId);
-  }
-
-  /** Handles clicking of the submit button */
-  handleSubmitButton() {
-    localStorage.clear();
-    localStorage.setItem('sale-data', JSON.stringify(this._saleData));
-    window.open('./order.html', '_self');
   }
 }

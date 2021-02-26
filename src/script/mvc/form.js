@@ -4,12 +4,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 /** MVC App imports */
-import { Model } from './models/indexModel';
-import { View } from './views/indexView';
-import { Controller } from './controllers/indexController';
-
-/** The data json file import */
-import data from '/res/data/data.json';
+import { FormModel } from './models/formModel';
+import { FormView } from './views/formView';
+import { FormController } from './controllers/formController';
 
 AOS.init(); // initialize AOS plugin
 /** check images for avif support (async)*/
@@ -20,5 +17,5 @@ AOS.init(); // initialize AOS plugin
 
 (function () {
   /** Start the mvc app */
-  const app = new Controller(new Model(data), new View());
+  const app = new FormController(new FormModel(), new FormView());
 })();

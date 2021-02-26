@@ -4,8 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
-    <script defer src="../script/pages/order.js"></script>
-    <script defer src="../script/pages/form.js"></script>
+    <script defer src="../script/mvc/form.js"></script>
+    <!-- <script defer src="../script/pages/order.js"></script>
+    <script defer src="../script/pages/form.js"></script> -->
     <link rel="stylesheet" href="../scss/app.scss" />
   </head>
   <body class="body bg-image">
@@ -187,11 +188,24 @@
     </main>
 
     <div class="modal" id="modal-one">
-      <div class="modal-bg modal-exit"></div>
+      <div class="modal-bg"></div>
       <div class="modal-container">
-        <h1>Amazing Modal</h1>
-        <h2>Pure Vanilla JavaScript</h2>
-        <button class="modal-close modal-exit">X</button>
+        <h1>Are you sure you want to submit this order?</h1>
+        <h2></h2>
+        <h3></h3>
+        <p>You will be emailed an invoice of this order for payment.</p>
+        <button id="modal-submit" class="modal-submit">Submit</button>
+        <button id="modal-close" class="modal-close modal-exit">Cancel</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-two">
+      <div class="modal-bg"></div>
+      <div class="modal-container">
+        <h1>Thanks!</h1>
+        <h2>Your order was successfully submitted.</h2>
+        <img src="../../res/img/unconverted/shiba-inu.jpeg" alt="Thank you image" />
+        <button id="modal-return" class="modal-return">Return Home</button>
       </div>
     </div>
 

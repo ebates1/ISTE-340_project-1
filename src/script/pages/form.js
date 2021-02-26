@@ -1,9 +1,6 @@
 /** The submission form */
 const form = document.forms['orderForm'];
 
-/** submission listener */
-const orderBtn = document.querySelector('#orderBtn').addEventListener('click', validateForm);
-
 /** ensures field validation on key up */
 document.addEventListener(
   'keyup',
@@ -23,7 +20,11 @@ document.addEventListener(
       validateField(e.target);
     }
     if (e.target.getAttribute('id') === 'orderBtn') {
-      validateForm;
+      console.log('woooo');
+      validateForm(e);
+    }
+    if (e.target.getAttribute('id') === 'cancelBtn') {
+      window.open('./index.html', '_self');
     }
   },
   false

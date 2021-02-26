@@ -4,7 +4,7 @@
 export class View {
   constructor() {
     this.selectContainer = document.querySelector('.pane__selects');
-    this.orderBtn = document.querySelector('#orderBtn');
+    this.selectConfirmBtn = document.querySelector('#select-confirm-button');
     this.imageContainer = document.querySelector('.pane__view > picture');
     this.headerButton = document.querySelector('.landing__linkbutton');
     this.logoButton = document.querySelector('nav__logo');
@@ -50,9 +50,9 @@ export class View {
     if (selectId != 0) this.selects[selectId].parentElement.classList.remove('hidden'); // show the select;
   };
 
-  showOrderButton = () => this.orderBtn.classList.remove('hidden');
+  showOrderButton = () => this.selectConfirmBtn.classList.remove('hidden');
 
-  hideOrderButton = () => this.orderBtn.classList.add('hidden');
+  hideOrderButton = () => this.selectConfirmBtn.classList.add('hidden');
 
   insertAtEnd = (element, html) => element.insertAdjacentHTML('beforeend', html);
 

@@ -3,6 +3,9 @@
   @include respond-to(screen-md) {
     padding: 0rem;
   }
+  h2 {
+    text-align: center;
+  }
 }
 
 .pane {
@@ -82,7 +85,4 @@
     border-bottom: solid #a7a7a7 1px;
     border-radius: 0.1rem;
   }
-}
-
-#orderBtn {
 }
